@@ -121,4 +121,5 @@ def fert_recommend():
         return render_template('fert_Result.html', recommendation="No fertilizer recommendation found for the selected crop.", title=title)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=5632)
+
