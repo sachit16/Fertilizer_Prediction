@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #007F73;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="number"],
+button[type="submit"],
+button[type="button"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button[type="submit"],
+button[type="button"] {
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"] {
+    background-color: #6c63ff;
+    color: #fff;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover {
+    background-color: #5636ba;
+}
+
+button[type="button"] {
+    background-color: #ddd;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="button"]:hover {
+    background-color: #ccc;
+}
+
+
+/* style.css */
+
+/* style.css */
+
+.recommendation-box {
+    background-color: #FFF455; /* Yellow background color */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    margin: 0 auto; /* Center the box horizontally */
+    max-width: 600px; /* Set maximum width of the box */
+}
+
+.recommendation-box p {
+    color: #2c3e50; /* Black text color */
+    font-weight: bold;
+    text-align: center; /* Center the text within the box */
+    margin-bottom: 10px
+}

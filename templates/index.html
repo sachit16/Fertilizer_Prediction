@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation - ML Model</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Crop Recommendation - ML Model</h1><br>
+        <form id="inputForm" method="post" action="/predict">
+            <div class="form-group">
+                <label for="N">Nitrogen Value in soil (N): </label>
+                <input type="number" name="N" id="N" min="0" max="140" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="P">Phosphorus Value in soil (P):</label>
+                <input type="number" name="P" id="P" min="5" max="145" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="K">Potassium Value in soil (K):</label>
+                <input type="number" name="K" id="K" min="5" max="205" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="temperature">Temperature (°C):</label>
+                <input type="number" name="temperature" id="temperature" min="-50" max="50" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="humidity">Humidity (%):</label>
+                <input type="number" name="humidity" id="humidity" min="0" max="100" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="ph">PH Value:</label>
+                <input type="number" name="ph" id="ph" min="0" max="15" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="rainfall">Rainfall (mm):</label>
+                <input type="number" name="rainfall" id="rainfall" min="20" max="300" step="any" required>
+            </div>
+            <button type="submit">Submit</button>
+            <button type="button" onclick="clearForm()">Clear Form</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fertilizer Recommendation</title>
+    <style>
+        /* CSS to style the form */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+        
+        .container {
+            width: 400px; /* Fixed width */
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="number"], select {
+            width: calc(100% - 20px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"], button[type="button"] {
+            width: calc(100% - 10px);
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover, button[type="button"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1>Fertilizer Recommendation</h1>
+            <form id="inputForm" method="post" action="/fertilizer-predict">
+                <div class="form-group">
+                    <label for="N">N (Nitrogen):</label>
+                    <input type="number" name="N" id="N" min="0" max="140" step="any" placeholder="Please Enter Nitrogen value in your soil"   required>
+                </div>
+                <div class="form-group">
+                    <label for="P">P (Phosphorus):</label>
+                    <input type="number" name="P" id="P" min="5" max="145" step="any" placeholder="Please Enter Phosphorus value in your soil" required>
+                </div>
+                <div class="form-group">
+                    <label for="K">K (Potassium):</label>
+                    <input type="number" name="K" id="K" min="5" max="205" step="any" placeholder="Please Enter Potassium value in your soil" required>
+                </div>
+                <div class="form-group">
+                    <label for="crop">Select Crop:</label>
+                    <select id="crop" name="crop" required>
+                        <option value="" disabled selected>Select Crop</option>
+                        <option value="rice">Rice</option>
+                        <option value="maize">Maize</option>
+                        <option value="chickpea">Chickpea</option>
+                        <option value="kidneybeans">Kidneybeans</option>
+                        <option value="pigeonpeas">Pigeonpeas</option>
+                        <option value="mothbeans">Mothbeans</option>
+                        <option value="mungbean">Mungbean</option>
+                        <option value="blackgram">Blackgram</option>
+                        <option value="lentil">Lentil</option>
+                        <option value="pomegranate">Pomegranate</option>
+                        <option value="banana">Banana</option>
+                        <option value="mango">Mango</option>
+                        <option value="grapes">Grapes</option>
+                        <option value="watermelon">Watermelon</option>
+                        <option value="muskmelon">Muskmelon</option>
+                        <option value="apple">Apple</option>
+                        <option value="orange">Orange</option>
+                        <option value="papaya">Papaya</option>
+                        <option value="coconut">Coconut</option>
+                        <option value="cotton">Cotton</option>
+                        <option value="jute">Jute</option>
+                        <option value="coffee">Coffee</option>
+                    </select>
+                </div>
+                <button type="submit">Get Fertilizer Recommendation</button>
+                <button type="button" onclick="clearForm()">Clear Form</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function clearForm() {
+            document.getElementById("inputForm").reset();
+        }
+    </script>
+</body>
+</html>
