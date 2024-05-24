@@ -83,7 +83,7 @@ def fert_recommend():
     crop_name = request.json['crop'].strip().lower()
 
     # Read fertilizer data from a CSV file
-    df = pd.read_csv('Data/fertilizer.csv')
+    df = pd.read_csv('./Data/fertilizer.csv')
 
     # Convert crop names in the DataFrame to lowercase and remove extra whitespace
     df['Crop'] = df['Crop'].str.strip().str.lower()
